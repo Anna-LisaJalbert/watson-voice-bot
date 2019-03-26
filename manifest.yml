@@ -1,7 +1,7 @@
 ---
 declared-services:
-  wvb-conversation-service:
-    label: conversation
+  wvb-assitant-service:
+    label: assitant
     plan: free
   wvb-texttospeech-service:
     label: text_to_speech
@@ -14,13 +14,13 @@ applications:
 - path: .
   memory: 128M
   instances: 1
-  name: watson-voice-bot
-  host: watson-voice-bot
+  name: watson-voice-demo
+  host: watson-voice-demo
   disk_quota: 512M
   buildpack: https://github.com/cloudfoundry/python-buildpack.git
   random-route: false
   services:
-  - wvb-conversation-service
+  - wvb-assistant-service
   - wvb-texttospeech-service
   - wvb-speechtotext-service
 env:
